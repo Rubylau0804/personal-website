@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Rubylau0804.github.io/',
+  base: '/personal-website/',
   plugins: [react(), tailwindcss()],
 })
