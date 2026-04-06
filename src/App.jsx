@@ -5,12 +5,14 @@ export default function App() {
   const [projectTab, setProjectTab] = useState("overview");
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
+  const BASE = import.meta.env.BASE_URL;
+
   const project = {
     title: "Modeling Pokémon Types with Deep and Lightweight CNNs",
     description:
       "Built an image classification project to predict Pokémon primary types using only image data. Compared EfficientNetV2B0 and MobileNetV2 under transfer learning settings, and used Grad-CAM to interpret model attention.",
     tags: ["Python", "Deep Learning", "CNN", "Transfer Learning", "Grad-CAM"],
-    link: "/pokemon-project.pdf",
+    link: `${BASE}pokemon-project.pdf`,
     overview: [
       "Compared EfficientNetV2B0 and MobileNetV2 under transfer learning settings.",
       "Focused on classifying Pokémon primary types from image data only.",
@@ -60,31 +62,31 @@ export default function App() {
   ];
 
   const photoGallery = [
-    { src: "/photo1.jpg", title: "Photo 01" },
-    { src: "/photo2.jpg", title: "Photo 02" },
-    { src: "/photo3.jpg", title: "Photo 03" },
-    { src: "/photo4.jpg", title: "Photo 04" },
-    { src: "/photo5.jpg", title: "Photo 05" },
-    { src: "/photo6.jpg", title: "Photo 06" },
-    { src: "/photo7.jpg", title: "Photo 07" },
-    { src: "/photo8.jpg", title: "Photo 08" },
-    { src: "/photo9.jpg", title: "Photo 09" },
-    { src: "/photo10.jpg", title: "Photo 10" },
-    { src: "/photo11.jpg", title: "Photo 11" },
-    { src: "/photo12.jpg", title: "Photo 12" },
-    { src: "/photo13.jpg", title: "Photo 13" },
-    { src: "/photo14.jpg", title: "Photo 14" },
-    { src: "/photo15.jpg", title: "Photo 15" },
-    { src: "/photo16.jpg", title: "Photo 16" },
-    { src: "/photo17.jpg", title: "Photo 17" },
-    { src: "/photo18.jpg", title: "Photo 18" },
-    { src: "/photo19.jpg", title: "Photo 19" },
-    { src: "/photo20.jpg", title: "Photo 20" },
-    { src: "/photo21.jpg", title: "Photo 21" },
-    { src: "/photo22.jpg", title: "Photo 22" },
-    { src: "/photo23.jpg", title: "Photo 23" },
-    { src: "/photo24.jpg", title: "Photo 24" },
-    { src: "/photo25.jpg", title: "Photo 24" }
+    { src: `${BASE}photo1.jpg`, title: "Photo 01" },
+    { src: `${BASE}photo2.jpg`, title: "Photo 02" },
+    { src: `${BASE}photo3.jpg`, title: "Photo 03" },
+    { src: `${BASE}photo4.jpg`, title: "Photo 04" },
+    { src: `${BASE}photo5.jpg`, title: "Photo 05" },
+    { src: `${BASE}photo6.jpg`, title: "Photo 06" },
+    { src: `${BASE}photo7.jpg`, title: "Photo 07" },
+    { src: `${BASE}photo8.jpg`, title: "Photo 08" },
+    { src: `${BASE}photo9.jpg`, title: "Photo 09" },
+    { src: `${BASE}photo10.jpg`, title: "Photo 10" },
+    { src: `${BASE}photo11.jpg`, title: "Photo 11" },
+    { src: `${BASE}photo12.jpg`, title: "Photo 12" },
+    { src: `${BASE}photo13.jpg`, title: "Photo 13" },
+    { src: `${BASE}photo14.jpg`, title: "Photo 14" },
+    { src: `${BASE}photo15.jpg`, title: "Photo 15" },
+    { src: `${BASE}photo16.jpg`, title: "Photo 16" },
+    { src: `${BASE}photo17.jpg`, title: "Photo 17" },
+    { src: `${BASE}photo18.jpg`, title: "Photo 18" },
+    { src: `${BASE}photo19.jpg`, title: "Photo 19" },
+    { src: `${BASE}photo20.jpg`, title: "Photo 20" },
+    { src: `${BASE}photo21.jpg`, title: "Photo 21" },
+    { src: `${BASE}photo22.jpg`, title: "Photo 22" },
+    { src: `${BASE}photo23.jpg`, title: "Photo 23" },
+    { src: `${BASE}photo24.jpg`, title: "Photo 24" },
+    { src: `${BASE}photo25.jpg`, title: "Photo 24" }
   ];
 
   return (
@@ -120,7 +122,7 @@ export default function App() {
               Contact
             </a>
             <a
-              href="/resume.pdf"
+              href={`${BASE}resume.pdf`}
               target="_blank"
               rel="noreferrer"
               className="rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-white transition hover:-translate-y-0.5"
@@ -169,7 +171,7 @@ export default function App() {
                   View Projects
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href={`${BASE}resume.pdf`}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-2xl border border-sky-200 bg-white px-6 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300"
@@ -177,7 +179,7 @@ export default function App() {
                   View Resume
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href={`${BASE}resume.pdf`}
                   download
                   className="rounded-2xl border border-sky-200 bg-white px-6 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300"
                 >
@@ -205,7 +207,7 @@ export default function App() {
               <div className="w-full max-w-md rounded-[2rem] border border-white/70 bg-white/88 p-6 shadow-2xl shadow-sky-100 backdrop-blur">
                 <div className="relative overflow-hidden rounded-[1.5rem]">
                   <img
-                    src="/profile.jpg"
+                    src={`${BASE}profile.jpg`}
                     alt="Yinghao Liu profile"
                     className="h-[430px] w-full object-cover object-center"
                   />
@@ -281,7 +283,7 @@ export default function App() {
               <div className="flex items-center justify-center bg-gradient-to-b from-sky-50 via-blue-50 to-cyan-50 p-8">
                 <div className="w-full max-w-[260px] overflow-hidden rounded-[1.5rem] shadow-lg">
                   <img
-                    src="/pokemon-cover.jpg"
+                    src={`${BASE}pokemon-cover.jpg`}
                     alt="Pokémon project cover"
                     className="h-auto w-full object-cover"
                   />
